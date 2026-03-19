@@ -78,6 +78,7 @@ extern "C" {
  *
  */
 #define EXAMPLE_LVGL_PORT_ROTATION_DEGREE  (CONFIG_EXAMPLE_LVGL_PORT_ROTATION_DEGREE)
+//#define EXAMPLE_LVGL_PORT_ROTATION_DEGREE  (180)
 
 /**
  * Below configurations are automatically set according to the above configurations, users do not need to modify them.
