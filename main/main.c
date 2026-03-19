@@ -10,6 +10,69 @@
 
 static const char *TAG_UI = "UI_EVENT";
 
+// 0~9 이미지 배열 (이렇게 해두면 img_nums[3] 하면 3번 이미지가 바로 튀어나옵니다!)
+const lv_img_dsc_t * img_nums[10] = {
+    &ui_img_numb_0_png, &ui_img_numb_1_png, &ui_img_numb_2_png, &ui_img_numb_3_png, 
+    &ui_img_numb_4_png, &ui_img_numb_5_png, &ui_img_numb_6_png, &ui_img_numb_7_png, 
+    &ui_img_numb_8_png, &ui_img_numb_9_png
+};
+
+// 시계 업데이트 함수 (이제 500ms마다 실행됩니다!)
+void clock_update_cb(lv_timer_t * timer)
+{
+    // 시작 시간 설정 (금방 분이 넘어가는 걸 보려고 11시 58분 55초로 세팅했습니다)
+    static int hour = 11;
+    static int minute = 58;
+    static int second = 55; // 초 단위 추가!
+    static bool is_pm = true;
+
+    // 콜론 깜빡임 상태 변수
+    static bool colon_show = true;
+
+    // 1. 콜론 깜빡임 로직 (500ms마다 토글)
+    colon_show = !colon_show;
+    
+    // ui_ImgColon 이름은 부장님이 SquareLine에서 만드신 콜론 위젯 이름에 맞추세요!
+    if (colon_show) {
+        // 불투명도를 255(100%)로 설정 (화면에 보임, 자리는 유지)
+        lv_obj_set_style_img_opa(ui_ImgColon, 255, 0);
+    } else {
+        // 불투명도를 0(0%)으로 설정 (투명해짐, 자리는 유지)
+        lv_obj_set_style_img_opa(ui_ImgColon, 0, 0);
+    }
+
+    // 2. 정상적인 시간 흐름 (콜론이 켜질 때 = 즉 2번 실행될 때마다 = 1초마다)
+    if (colon_show) {
+        second++;
+        if (second >= 60) {
+            second = 0;
+            minute++;
+            if (minute >= 60) {
+                minute = 0;
+                hour++;
+                if (hour == 12) {
+                    is_pm = !is_pm; // 12시가 되면 AM/PM 반전
+                }
+                if (hour > 12) {
+                    hour = 1; // 13시 대신 1시
+                }
+            }
+        }
+    }
+
+    // 3. 이미지 교체 로직 (기존과 동일)
+    if (is_pm) {
+        lv_img_set_src(ui_ImgAMPM, &ui_img_pm_png);
+    } else {
+        lv_img_set_src(ui_ImgAMPM, &ui_img_am_png);
+    }
+
+    lv_img_set_src(ui_ImgHour10, img_nums[hour / 10]);
+    lv_img_set_src(ui_ImgHour1,  img_nums[hour % 10]);
+    lv_img_set_src(ui_ImgMin10, img_nums[minute / 10]);
+    lv_img_set_src(ui_ImgMin1,  img_nums[minute % 10]);
+}
+
 void app_main()
 {
     waveshare_esp32_s3_rgb_lcd_init(); // Initialize the Waveshare ESP32-S3 RGB LCD 
@@ -26,6 +89,8 @@ void app_main()
         // example_lvgl_demo_ui();
         // 드디어 도화지에 버튼을 그립니다!
            ui_init();
+        // 기존 1000을 500으로 변경! (0.5초마다 콜백 함수 실행)
+           lv_timer_create(clock_update_cb, 500, NULL);
         // Release the mutex
         lvgl_port_unlock();
     }

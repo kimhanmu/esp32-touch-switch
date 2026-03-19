@@ -14,6 +14,20 @@ extern "C" {
 extern void ui_Screen1_screen_init(void);
 extern void ui_Screen1_screen_destroy(void);
 extern lv_obj_t *ui_Screen1;
+extern lv_obj_t *ui_HiddenImages;
+extern lv_obj_t *ui_numb0;
+extern lv_obj_t *ui_numb1;
+extern lv_obj_t *ui_numb2;
+extern lv_obj_t *ui_numb3;
+extern lv_obj_t *ui_numb4;
+extern lv_obj_t *ui_numb5;
+extern lv_obj_t *ui_numb6;
+extern lv_obj_t *ui_numb7;
+extern lv_obj_t *ui_numb8;
+extern lv_obj_t *ui_numb9;
+extern lv_obj_t *ui_AMiamge;
+extern lv_obj_t *ui_PMimage;
+extern lv_obj_t *ui_colon;
 extern lv_obj_t *ui_Mainscroll;
 extern lv_obj_t *ui_page1;
 extern void ui_event_ImgButton1( lv_event_t * e);
@@ -27,6 +41,13 @@ extern void ui_event_Image2( lv_event_t * e);
 extern lv_obj_t *ui_Image2;
 extern void ui_event_Image1( lv_event_t * e);
 extern lv_obj_t *ui_Image1;
+extern lv_obj_t *ui_ClockPanel;
+extern lv_obj_t *ui_ImgAMPM;
+extern lv_obj_t *ui_ImgHour10;
+extern lv_obj_t *ui_ImgHour1;
+extern lv_obj_t *ui_ImgColon;
+extern lv_obj_t *ui_ImgMin10;
+extern lv_obj_t *ui_ImgMin1;
 // CUSTOM VARIABLES
 
 #ifdef __cplusplus

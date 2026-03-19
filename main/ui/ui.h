@@ -26,6 +26,19 @@ extern "C" {
 extern lv_obj_t *ui____initial_actions0;
 
 // IMAGES AND IMAGE SETS
+LV_IMG_DECLARE( ui_img_numb_0_png);   // assets/numb_0.png
+LV_IMG_DECLARE( ui_img_numb_1_png);   // assets/numb_1.png
+LV_IMG_DECLARE( ui_img_numb_2_png);   // assets/numb_2.png
+LV_IMG_DECLARE( ui_img_numb_3_png);   // assets/numb_3.png
+LV_IMG_DECLARE( ui_img_numb_4_png);   // assets/numb_4.png
+LV_IMG_DECLARE( ui_img_numb_5_png);   // assets/numb_5.png
+LV_IMG_DECLARE( ui_img_numb_6_png);   // assets/numb_6.png
+LV_IMG_DECLARE( ui_img_numb_7_png);   // assets/numb_7.png
+LV_IMG_DECLARE( ui_img_numb_8_png);   // assets/numb_8.png
+LV_IMG_DECLARE( ui_img_numb_9_png);   // assets/numb_9.png
+LV_IMG_DECLARE( ui_img_am_png);   // assets/AM.png
+LV_IMG_DECLARE( ui_img_pm_png);   // assets/PM.png
+LV_IMG_DECLARE( ui_img_colon_png);   // assets/colon.png
 LV_IMG_DECLARE( ui_img_circuit1_off_png);   // assets/circuit1_off.png
 LV_IMG_DECLARE( ui_img_circuit1_on_png);   // assets/circuit1_on.png
 LV_IMG_DECLARE( ui_img_1732143338);   // assets/circuit2-off.png

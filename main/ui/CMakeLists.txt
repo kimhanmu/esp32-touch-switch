@@ -5,6 +5,19 @@ SET(SOURCES components/ui_comp_imgbutton1.c
     components/ui_comp_hook.c
     ui_helpers.c
     ui_events.c
+    images/ui_img_numb_0_png.c
+    images/ui_img_numb_1_png.c
+    images/ui_img_numb_2_png.c
+    images/ui_img_numb_3_png.c
+    images/ui_img_numb_4_png.c
+    images/ui_img_numb_5_png.c
+    images/ui_img_numb_6_png.c
+    images/ui_img_numb_7_png.c
+    images/ui_img_numb_8_png.c
+    images/ui_img_numb_9_png.c
+    images/ui_img_am_png.c
+    images/ui_img_pm_png.c
+    images/ui_img_colon_png.c
     images/ui_img_circuit1_off_png.c
     images/ui_img_circuit1_on_png.c
     images/ui_img_1732143338.c
