@@ -42,3 +42,38 @@ void scroll_to_page1(lv_event_t * e)
 {
 	// Your code here
 }
+
+void nav_light_click(lv_event_t * e)
+{
+	// Your code here
+}
+
+void nav_bright_click(lv_event_t * e)
+{
+	// Your code here
+}
+
+void nav_heat_click(lv_event_t * e)
+{
+	// Your code here
+}
+
+void nav_electric_click(lv_event_t * e)
+{
+	// Your code here
+}
+
+void nav_setting_click(lv_event_t * e)
+{
+	// Your code here
+}
+
+void scroll_to_page_prev(lv_event_t * e)
+{
+	// Your code here
+}
+
+void scroll_to_page_next(lv_event_t * e)
+{
+	// Your code here
+}

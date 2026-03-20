@@ -13,8 +13,13 @@ extern "C" {
 void ui_event_light1_switch(lv_event_t * e);
 void ui_event_light2_switch(lv_event_t * e);
 void ui_event_Boiler_switch(lv_event_t * e);
-void scroll_to_page1(lv_event_t * e);
-void scroll_to_page2(lv_event_t * e);
+void scroll_to_page_prev(lv_event_t * e);
+void scroll_to_page_next(lv_event_t * e);
+void nav_light_click(lv_event_t * e);
+void nav_bright_click(lv_event_t * e);
+void nav_heat_click(lv_event_t * e);
+void nav_electric_click(lv_event_t * e);
+void nav_setting_click(lv_event_t * e);
 
 #ifdef __cplusplus
 } /*extern "C"*/

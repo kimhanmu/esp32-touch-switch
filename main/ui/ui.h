@@ -39,6 +39,16 @@ LV_IMG_DECLARE( ui_img_numb_9_png);   // assets/numb_9.png
 LV_IMG_DECLARE( ui_img_am_png);   // assets/AM.png
 LV_IMG_DECLARE( ui_img_pm_png);   // assets/PM.png
 LV_IMG_DECLARE( ui_img_colon_png);   // assets/colon.png
+LV_IMG_DECLARE( ui_img_light_on_png);   // assets/light_on.png
+LV_IMG_DECLARE( ui_img_light_off_png);   // assets/light_off.png
+LV_IMG_DECLARE( ui_img_bright_on_png);   // assets/bright_on.png
+LV_IMG_DECLARE( ui_img_bright_off_png);   // assets/bright_off.png
+LV_IMG_DECLARE( ui_img_heat_on_png);   // assets/heat_on.png
+LV_IMG_DECLARE( ui_img_heat_off_png);   // assets/heat_off.png
+LV_IMG_DECLARE( ui_img_electric_on_png);   // assets/electric_on.png
+LV_IMG_DECLARE( ui_img_electric_off_png);   // assets/electric_off.png
+LV_IMG_DECLARE( ui_img_setting_on_png);   // assets/setting_on.png
+LV_IMG_DECLARE( ui_img_setting_off_png);   // assets/setting_off.png
 LV_IMG_DECLARE( ui_img_circuit1_off_png);   // assets/circuit1_off.png
 LV_IMG_DECLARE( ui_img_circuit1_on_png);   // assets/circuit1_on.png
 LV_IMG_DECLARE( ui_img_1732143338);   // assets/circuit2-off.png
